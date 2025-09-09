@@ -1,5 +1,4 @@
-  GNU nano 8.3                                                                                                            .github/workflows/lint-test.yml
-name: CI - Lint and Test
+  GNU nano 8.3                                                                                                            .github/name: name: CI - Lint and Test
 
 on:
   push:
@@ -9,9 +8,7 @@ on:
 jobs:
   lint-and-test:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: project
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -22,14 +19,20 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          cd project
+          npm ci
 
-      - name: Run lint
-        run: npx eslint .
+      - name: Install global dependencies
+        run: npm install -g eslint
 
-      - name: Run tests
-        run: npm test
+      - name: Run Lint
+        run: |
+          cd project
+          eslint .
 
-
-
+      - name: Run Tests
+        run: |
+          cd project
+          npm test
 
