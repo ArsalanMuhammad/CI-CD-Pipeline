@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "lint": "npx eslint .",
+    "lint": "node_modules/.bin/eslint .",
     "test": "jest --runInBand"
   },
   "devDependencies": {

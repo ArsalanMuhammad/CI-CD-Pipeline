@@ -1,4 +1,4 @@
-  GNU nano 8.3                                                                                                            .github/name: name: CI - Lint and Test
+name: CI - Lint and Test
 
 on:
   push:
@@ -23,7 +23,7 @@ jobs:
           cd project
           npm ci
 
-      - name: Install global dependencies
+      - name: Install global eslint
         run: npm install -g eslint
 
       - name: Run Lint
