@@ -1,0 +1,16 @@
+name: Run Script
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+
+jobs:
+  run-script-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Run run.sh
+        run: bash ./run.sh
