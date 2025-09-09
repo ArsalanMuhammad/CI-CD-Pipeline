@@ -1,11 +1,11 @@
 {
   "name": "CI-CD-Pipeline",
   "version": "1.0.0",
-  "description": "A CI/CD pipeline project with ESLint workflow",
+  "description": "A CI/CD pipeline project",
   "scripts": {
     "lint": "npx eslint .",
-    "build": "echo Building project...",
-    "workflow": "npm run lint && npm run build"
+    "test": "echo Running tests...",
+    "workflow": "npm run lint && npm run test"
   },
   "devDependencies": {
     "eslint": "^9.35.0"
