@@ -3,14 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "lint": "eslint .",
+    "lint": "npx eslint .",
     "test": "jest --runInBand"
-  },
-  "jest": {
-    "testEnvironment": "node",
-    "transform": {
-      "^.+\\.js$": "babel-jest"
-    }
   },
   "devDependencies": {
     "eslint": "^8.0.0",
