@@ -1,11 +1,10 @@
-import { FlatCompat } from "@eslint/eslintrc";
-
-const compat = new FlatCompat({ baseDirectory: process.cwd() });
-
 export default [
-  ...compat.extends("eslint:recommended"),
   {
     files: ["**/*.js"],
+    languageOptions: {
+      ecmaVersion: 2021,
+      sourceType: "module"
+    },
     rules: {
       semi: ["error", "always"],
       quotes: ["error", "double"]
